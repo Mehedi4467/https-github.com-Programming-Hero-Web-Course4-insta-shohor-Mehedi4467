@@ -143,10 +143,12 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  const likeDiv = document.getElementById("liked");
+  likeDiv.textContent = '';
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
     const div = createPost(post);
-    document.getElementById("liked").appendChild(div);
+    likeDiv.appendChild(div);
   });
 };
 
